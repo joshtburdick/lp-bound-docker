@@ -12,10 +12,10 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-          sudo apt-get update && sudo apt-get install -y glpk figlet
+          sudo apt-get update && sudo apt-get install -y glpk-utils figlet
       - run:
           name: Gratuitous other step
-          command: figlet test message & ls -l
+          command: figlet test message & ls -l & which glpsol
       - run:
           name: Run tests
           command: |
