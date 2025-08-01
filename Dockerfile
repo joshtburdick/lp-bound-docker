@@ -12,14 +12,12 @@ WORKDIR /app
 
 # install packages
 RUN apt-get update \
-    && apt-get install -y glpk-utils python3-pip python3-venv
+    && apt-get install -y glpk-utils python3-pip
 
 # FIXME avoid root privileges sooner?
 
 # install Python dependencies
-RUN python3 -m venv env1 \
-    && source env1/bin/activate \
-    && python3 -m pip install numpy pandas seaborn
+python3 -m pip install numpy pandas seaborn
 
 # clone repo
 RUN mkdir git \
