@@ -11,8 +11,8 @@ ADD . /app
 WORKDIR /app
 
 # install packages
-RUN sudo apt-get update \
-    && sudo apt-get install -y glpk-utils figlet
+RUN apt-get update \
+    && apt-get install -y glpk-utils
 
 # Install Node.js module dependencies
 COPY package.json .
