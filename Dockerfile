@@ -17,8 +17,9 @@ RUN apt-get update \
 # FIXME avoid root privileges sooner?
 
 # install Python dependencies
-RUN python3 -m venv venv
-venv/bin/pip3 install numpy pandas seaborn
+RUN python3 -m venv venv \
+    && venv/bin/pip3 install numpy pandas seaborn
+
 # RUN sh -c ". /opt/venv/bin/activate && pip3 install numpy pandas seaborn
 
 # clone repo
