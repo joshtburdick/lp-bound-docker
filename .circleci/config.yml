@@ -12,9 +12,6 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-          name: Smoke test of glpsol
-          command: ls -l & which glpsol & glpsol --version
-      - run:
           name: Run tests
           command: |
             docker-compose -f ./docker-compose.test.yml up
