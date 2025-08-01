@@ -17,7 +17,7 @@ RUN apt-get update \
 # FIXME avoid root privileges sooner?
 
 # install Python dependencies
-python3 -m pip install numpy pandas seaborn
+RUN python3 -m pip install numpy pandas seaborn
 
 # clone repo
 RUN mkdir git \
