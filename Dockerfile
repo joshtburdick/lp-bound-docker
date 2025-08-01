@@ -17,9 +17,9 @@ RUN apt-get update \
 # FIXME avoid root privileges sooner?
 
 # install Python dependencies
-RUN python3 -m venv env1 \
-    && source env1/bin/activate \
-    && python3 -m pip install numpy pandas seaborn
+RUN python3 -m venv venv
+venv/bin/pip3 install numpy pandas seaborn
+# RUN sh -c ". /opt/venv/bin/activate && pip3 install numpy pandas seaborn
 
 # clone repo
 RUN mkdir git \
@@ -37,11 +37,9 @@ RUN mkdir git \
 
 # COPY . .
 
-# EXPOSE 5000
-
 # CMD ["node", "start.js"]
 
 RUN cd git/misc/countingBound/py/fractions
-
-CMD ["./ip_bound_2.py"]
+CMD /app/venv/bin/python3 ./ip_bound_2.py
+# CMD sh -c ". /opt/venv/bin/activate && exec ./ip_bound_2.py"
 
