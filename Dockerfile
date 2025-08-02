@@ -18,7 +18,7 @@ RUN apt-get update \
 
 # install Python dependencies
 RUN python3 -m venv venv \
-    && venv/bin/pip3 install numpy scipy pandas seaborn
+    && venv/bin/pip3 install numpy scipy pandas seaborn pulp
 
 # RUN sh -c ". /opt/venv/bin/activate && pip3 install numpy pandas seaborn
 
