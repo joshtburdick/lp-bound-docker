@@ -40,7 +40,10 @@ RUN mkdir git \
 
 # CMD ["node", "start.js"]
 
-RUN cd git/misc/countingBound/py/fractions
-CMD /app/venv/bin/python3 ./ip_bound_2.py
+RUN echo trying to run bash...
+CMD ["bash"]
+
+# RUN cd git/misc/countingBound/py/fractions
+# CMD /app/venv/bin/python3 ./ip_bound_2.py
 # CMD sh -c ". /opt/venv/bin/activate && exec ./ip_bound_2.py"
 
