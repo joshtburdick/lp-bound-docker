@@ -27,6 +27,9 @@ RUN mkdir git \
     && cd git \
     && git clone https://github.com/joshtburdick/misc
 
+# FIXME put script in /app/bin?
+ENV PATH="$PATH:/app"
+
 # run the bound
 RUN cd /app
-CMD ["/app/ip_picky"]
+ENTRYPOINT ["/app/ip_picky"]
