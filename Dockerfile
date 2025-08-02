@@ -27,9 +27,6 @@ RUN mkdir git \
     && cd git \
     && git clone https://github.com/joshtburdick/misc
 
-# RUN echo trying to run bash...
-# CMD ["bash"]
-
-RUN cd git/misc/countingBound/py/fractions
-CMD /app/venv/bin/python3 ./ip_bound_2.py
-
+# run the bound
+RUN cd /app
+CMD venv/bin/python3 git/misc/countingBound/py/fractions/ip_bound_2.py 
