@@ -1,0 +1,3 @@
+#!/bin/bash
+# Attempt at simplifying running this.
+venv/bin/python3 git/misc/countingBound/py/fractions/ip_picky.py
