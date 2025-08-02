@@ -27,19 +27,6 @@ RUN mkdir git \
     && cd git \
     && git clone https://github.com/joshtburdick/misc
 
-# Install Node.js module dependencies
-# COPY package.json .
-# COPY package-lock.json .
-# RUN npm install
-
-###
-# Let's get started!
-#
-
-# COPY . .
-
-# CMD ["node", "start.js"]
-
 # RUN echo trying to run bash...
 # CMD ["bash"]
 
