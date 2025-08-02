@@ -18,7 +18,7 @@ RUN apt-get update \
 
 # install Python dependencies
 RUN python3 -m venv venv \
-    && venv/bin/pip3 install numpy pandas seaborn
+    && venv/bin/pip3 install numpy scipy pandas seaborn
 
 # RUN sh -c ". /opt/venv/bin/activate && pip3 install numpy pandas seaborn
 
@@ -40,10 +40,9 @@ RUN mkdir git \
 
 # CMD ["node", "start.js"]
 
-RUN echo trying to run bash...
-CMD ["bash"]
+# RUN echo trying to run bash...
+# CMD ["bash"]
 
-# RUN cd git/misc/countingBound/py/fractions
-# CMD /app/venv/bin/python3 ./ip_bound_2.py
-# CMD sh -c ". /opt/venv/bin/activate && exec ./ip_bound_2.py"
+RUN cd git/misc/countingBound/py/fractions
+CMD /app/venv/bin/python3 ./ip_bound_2.py
 
