@@ -29,4 +29,4 @@ RUN mkdir git \
 
 # run the bound
 RUN cd /app
-ENTRYPOINT ["ip_picky"]
+ENTRYPOINT ["/app/ip_picky"]
