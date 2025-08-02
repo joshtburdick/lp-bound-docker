@@ -29,4 +29,4 @@ RUN mkdir git \
 
 # run the bound
 RUN cd /app
-CMD venv/bin/python3 git/misc/countingBound/py/fractions/ip_picky.py
+CMD ["venv/bin/python3", "git/misc/countingBound/py/fractions/ip_picky.py"]
